@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Cart - Nitec</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/1728/1728669.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .product-img {
+      height: 80px;
+      width: 80px;
+      object-fit: cover;
+    }
+    .cart-summary {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body class="bg-primary-subtle">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm container mt-2 size">
+        <div class="container">
+          
+          <!-- Brand / Logo -->
+          <a class="navbar-brand fw-bold" href="#"><i class="bi bi-headphones me-2"></i>Nitec</a>
+          
+          <!-- Toggler (for mobile) -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <!-- Navbar links -->
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link " href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="shop.html">Shop</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              
+            </ul>
+      
+            <!-- Right-side icons -->
+            <div class="d-flex align-items-center">
+              <!-- Trigger Button (No <a> wrapping) -->
+  <button type="button" class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
+    <i class="bi bi-person"></i>
+  </button>
+  
+  <!-- Login Modal -->
+  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Login</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="loginEmail" placeholder="Enter email">
+            </div>
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label">Password</label>
+              <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-primary w-100 mb-2">Login</button>
+          </form>
+          <div class="text-center">
+            <small>Don't have an account? <a href="#" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Register</a></small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Register Modal -->
+  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Register</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="registerName" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="registerName" placeholder="Enter full name">
+            </div>
+            <div class="mb-3">
+              <label for="registerEmail" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="registerEmail" placeholder="Enter email">
+            </div>
+            <div class="mb-3">
+              <label for="registerPassword" class="form-label">Password</label>
+              <input type="password" class="form-control" id="registerPassword" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-primary w-100 mb-2">Register</button>
+          </form>
+          <div class="text-center">
+            <small>Already have an account? <a href="#" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Login</a></small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+              <a href="wishlist.html" class="btn btn-outline-primary me-2">
+                <i class="bi bi-heart"></i>
+              </a>
+              <a href="cart.html" class="btn btn-primary">
+                <i class="bi bi-cart active"></i> Cart
+              </a>
+            </div>
+            
+          </div>
+          
+        </div>
+      </nav>
+
+<!-- My Cart Section -->
+<div class="container my-5 ">
+  <h2 class="mb-4">My Shopping Cart</h2>
+  <div class="row">
+    
+    <!-- Cart Items -->
+    <div class="col-lg-8 mb-4">
+      <div class="table-responsive rounded-3">
+        <table class="table align-middle rounded-3 ">
+          <thead class="table-light">
+            <tr>
+              <th scope="col">Product</th>
+              <th scope="col">Name</th>
+              <th scope="col">Price</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Total</th>
+              <th scope="col">Remove</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Item 1 -->
+            <tr>
+              <td><img src="still-life-wireless-cyberpunk-headphones.jpg" class="product-img rounded" alt="Product 1"></td>
+              <td>Wireless Headphones</td>
+              <td>₹2000</td>
+              <td>
+                <input type="number" class="form-control form-control-sm" value="1" min="1" style="width: 70px;">
+              </td>
+              <td>₹2000</td>
+              <td>
+                <button class="btn btn-sm btn-outline-danger">&times;</button>
+              </td>
+            </tr>
+            <!-- Item 2 -->
+            <tr>
+              <td><img src="Bluetooth speaker.jpg" class="product-img rounded" alt="Product 2"></td>
+              <td>Bluetooth Speaker</td>
+              <td>₹3500</td>
+              <td>
+                <input type="number" class="form-control form-control-sm" value="2" min="1" style="width: 70px;">
+              </td>
+              <td>₹7000</td>
+              <td>
+                <button class="btn btn-sm btn-outline-danger">&times;</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Summary & Checkout -->
+    <div class="col-lg-4">
+      <div class="cart-summary">
+        <h5>Cart Summary</h5>
+        <hr>
+        <p>Subtotal: <span class="float-end">₹9000</span></p>
+        <p>Shipping: <span class="float-end">₹50</span></p>
+        <hr>
+        <h6>Total: <span class="float-end text-primary">₹9050</span></h6>
+        <a href="#" class="btn btn-primary w-100 mt-3">Proceed to Checkout</a>
+        <a href="#" class="btn btn-outline-primary w-100 mt-2">Continue Shopping</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<footer class="bg-dark text-light pt-5 pb-4 mt-4">
+    <div class="container text-md-left">
+      <div class="row text-md-left">
+        
+        
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Nitec</h5>
+          <p>Best products at unbeatable prices. Shop with us for the latest trends and deals!</p>
+        </div>
+  
+        
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Products</h5>
+          <p><a href="#" class="text-light" style="text-decoration: none;">Electronics</a></p>
+          <p><a href="#" class="text-light" style="text-decoration: none;">Gadgets</a></p>
+          <p><a href="#" class="text-light" style="text-decoration: none;">Cables</a></p>
+          <p><a href="#" class="text-light" style="text-decoration: none;">Smart-Devices</a></p>
+        </div>
+  
+        
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Useful links</h5>
+          <p><a href="#" class="text-light" style="text-decoration: none;">Your Account</a></p>
+          <p><a href="#" class="text-light" style="text-decoration: none;">Affiliate Program</a></p>
+          <p><a href="#" class="text-light" style="text-decoration: none;">Shipping Rates</a></p>
+          <p><a href="#" class="text-light" style="text-decoration: none;">Help</a></p>
+        </div>
+  
+        
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
+          <p><i class="bi bi-house-door-fill me-2"></i> Nagercoil, 629851, India</p>
+          <p><i class="bi bi-envelope-fill me-2"></i> info@nitec.com</p>
+          <p><i class="bi bi-phone-fill me-2"></i> +91 9876543210</p>
+          <p><i class="bi bi-printer-fill me-2"></i> +91 9876543201</p>
+        </div>
+  
+      </div>
+  
+      <hr class="mb-4">
+  
+      
+      <div class="row align-items-center">
+        <div class="col-md-7 col-lg-8">
+          <p>© 2025 Nitec. All rights reserved.</p>
+        </div>
+        
+        <div class="col-md-5 col-lg-4">
+          <div class="text-center text-md-right">
+            <a href="#" class="text-light me-4"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-light me-4"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-light me-4"><i class="bi bi-google"></i></a>
+            <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </footer>
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

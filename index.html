@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nitec</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/1728/1728669.png">
+    <link rel="icon" href="https://icons.getbootstrap.com/icons/earbuds/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <style>
+       .carousel-caption {
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .carousel-item img {
+      height: 500px;
+      object-fit: cover;
+    }
+    </style>
+
+
+</head>
+<body class="bg-primary-subtle">
+   
+      <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm container mt-2 size">
+        <div class="container">
+          
+          <!-- Brand / Logo -->
+          <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-headphones me-2"></i>Nitec</a>
+          
+          <!-- Toggler (for mobile) -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <!-- Navbar links -->
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="shop.html">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              
+            </ul>
+      
+            <!-- Right-side icons -->
+            <div class="d-flex align-items-center">
+              <!-- <button type="button" class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                <i class="bi bi-person"></i>
+              
+              <a href="login.html" class="modal btn btn-outline-primary me-2">
+              </button>
+              </a> -->
+
+
+<!-- Trigger Button (No <a> wrapping) -->
+  <button type="button" class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
+    <i class="bi bi-person"></i>
+  </button>
+  
+  <!-- Login Modal -->
+  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Login</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="loginEmail" placeholder="Enter email">
+            </div>
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label">Password</label>
+              <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-primary w-100 mb-2">Login</button>
+          </form>
+          <div class="text-center">
+            <small>Don't have an account? <a href="#" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Register</a></small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Register Modal -->
+  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Register</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="registerName" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="registerName" placeholder="Enter full name">
+            </div>
+            <div class="mb-3">
+              <label for="registerEmail" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="registerEmail" placeholder="Enter email">
+            </div>
+            <div class="mb-3">
+              <label for="registerPassword" class="form-label">Password</label>
+              <input type="password" class="form-control" id="registerPassword" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-primary w-100 mb-2">Register</button>
+          </form>
+          <div class="text-center">
+            <small>Already have an account? <a href="#" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Login</a></small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+
+
+
+              <a href="wishlist.html" class="btn btn-outline-primary me-2">
+                <i class="bi bi-heart"></i>
+              </a>
+              <a href="cart.html" class="btn btn-primary">
+                <i class="bi bi-cart"></i> Cart
+              </a>
+            </div>
+            
+          </div>
+          
+        </div>
+      </nav>
+
+        <!-- search bar -->
+        <div class="search-container mt-3 justify-content-center mx-auto">
+            <input type="text" class="search-input" placeholder="Search for products...">
+            <button class="search-button">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+      
+
+
+         
+
+
+
+
+          <div class="container mt-4">
+            <div class="row justify-content-between gx-4 gy-4">
+          
+              <!-- Left Main Content -->
+              <div class="col-xl-9 col-lg-8 col-md-12">
+                <div class="row bg-light p-4 rounded-5">
+          
+                  <!-- Text Section -->
+                  <div class="col-lg-7 col-md-6 col-sm-12">
+                    <h2>Feel the Music</h2>
+                    <div class="d-flex align-items-start">
+                      <p class="display-4 mb-0">01</p>
+                      <div class="ms-3">
+                        <h4>Clear Sounds</h4>
+                        <p>Making your Dream Music Come True</p>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mt-3">
+                      <h6 class="mb-0">View All Products</h6>
+                      <a href="#"><i class="bi bi-arrow-up-right ms-3"></i></a>
+                    </div>
+          
+                    <div class="d-flex align-items-center mt-3">
+                      <h6 class="mb-0 me-2">Follow us on:</h6>
+                      <a href="#" class="me-2"><i class="bi bi-twitter"></i></a>
+                      <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+                      <a href="#"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                  </div>
+          
+                  <!-- Image Section -->
+                  <div class="col-lg-5 col-md-6 col-sm-12 text-center">
+                    <img src="pink-headphones-wireless-digital-device.jpg" style="height: 300px;" alt="Headphones"
+                      class="img-fluid rounded-4" >
+                  </div>
+                </div>
+          
+                <!-- Product Cards -->
+                <div class="row mt-4 gy-3 justify-content-between">
+                  <!-- More Products -->
+                  <div class="col-lg-4 col-md-4 col-sm-12 bg-light p-3 rounded-4">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                      <h5>More Products</h5>
+                      <div class="bg-secondary-subtle p-2 rounded-circle">
+                        <i class="bi bi-heart text-danger"></i>
+                      </div>
+                    </div>
+                    <p class="text-muted">420 plus items</p>
+                    <div class="d-flex justify-content-between">
+                      <img src="rendering-smart-home-device.jpg" class="rounded-3" style="height: 50px; width: 50px;">
+                      <img src="earphones-with-case-surrounded-by-nature-scene.jpg" class="rounded-3" style="height: 50px; width: 50px;">
+                      <img src="still-life-wireless-cyberpunk-headphones (1).jpg" class="rounded-3" style="height: 50px; width: 50px;">
+                    </div>
+                  </div>
+          
+                  <!-- Center Image -->
+                  <div class="col-lg-3 col-md-3 col-sm-12 bg-light rounded-4 text-center">
+                    <img src="3d-render-customer-leave-feedback-phone-screen-removebg-preview.png" class="img-fluid rounded-3" style="max-height: 150px; width: 150px;">
+                  </div>
+          
+                  <!-- Popular Product -->
+                  <div class="col-lg-4 col-md-4 bg-light p-3 rounded-4">
+                    <div class="d-flex flex-wrap align-items-center">
+                      <div class="flex-grow-1">
+                        <button class="btn btn-outline-success mb-2 rounded-3">Popular</button>
+                        <h6 class="mb-1">Listening Has</h6>
+                        <h6>Been Released</h6>
+                      </div>
+                      <div>
+                        <img src="still-life-wireless-cyberpunk-headphones (1).jpg" class="img-fluid rounded-2"
+                          style="height: 120px; width: 120px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Right Sidebar -->
+              <div class="col-xl-3 col-lg-4 col-md-5 bg-primary-subtle rounded-5 p-3 mb-2 align-items-between">
+                <div class="bg-light rounded-4 p-3 mb-4">
+                  <h6>Popular Colors</h6>
+                  <div class="d-flex justify-content-between mt-2">
+                    <span class="rounded-circle bg-blue" style="width: 25px; height: 25px;"></span>
+                    <span class="rounded-circle bg-red" style="width: 25px; height: 25px;"></span>
+                    <span class="rounded-circle bg-green" style="width: 25px; height: 25px;"></span>
+                    <span class="rounded-circle bg-yellow" style="width: 25px; height: 25px;"></span>
+                  </div>
+                </div>
+          
+                <div class="bg-light  bg-photo rounded-4 p-3 text-center position-relative">
+                  <div class="text-center"><h5>New Gen</h5>
+                  <h5>X-Boom</h5></div>
+                  <a href="#"><i class="bi bi-arrow-up-right border rounded-circle p-2 mt-2 d-inline-block position-relative Left-"></i></a>
+                  
+                </div>
+          
+                <div class="text-center mt-4">
+                  <img src="blonde-girl-listening-music-headphones-close-up.jpg" class="img-fluid rounded-4" alt="Model" style="max-height: 200px;">
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        <!-- Carousel Start -->
+<div id="heroCarousel" class="carousel slide h-25``" data-bs-ride="carousel">
+  <div class="carousel-inner mt-3">
+
+    <!-- Slide 1 -->
+    <div class="carousel-item active">
+      <img src="Banner1.jpg" class="d-block w-100" alt="Slide 1">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Exclusive Headphone Deals</h3>
+        <p>Up to 40% off on top brands.</p>
+        <a href="#" class="btn btn-primary">Shop Now</a>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item">
+      <img src="Banner2.jpg" class="d-block w-100" alt="Slide 2">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Headphones Collection</h3>
+        <p>Trendy, smart & stylish – at unbeatable prices.</p>
+        <a href="#" class="btn btn-success">Explore</a>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item">
+      <img src="Banner3.jpg" class="d-block w-100" alt="Slide 3">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Accessories World</h3>
+        <p>Everything you need for your gadgets.</p>
+        <a href="#" class="btn btn-warning">Browse</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </button>
+</div>
+<!-- Carousel End -->
+
+
+
+
+    
+     <!-- Cards-1-->
+        <h1 class="title-shop m-3 mt-5">Top Products For You</h1>
+        <main class="main bd-grid" data-aos="zoom-in-up " data-aos-duration="3000">
+            <article class="card ">
+                <div class="card__img">
+                    <img src="earphones-with-case-surrounded-by-nature-scene-removebg-preview.png" style="height: 150px;" alt="">
+                </div>
+                <div class="card__name">
+                    <p>Buds</p>
+                </div>
+                <div class="card__precis">
+                    <a href="" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+                    
+                    <div>
+                        <span class="card__preci card__preci--before">₹3999</span>
+                        <span class="card__preci card__preci--now">₹3499</span>
+                    </div>
+                    <a href="" class="card__icon"><ion-icon name="cart-outline"></ion-icon></a>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card__img">
+                    <img src="pink-headphones-wireless-digital-device-removebg-preview.png" style="height: 150px;" alt="">
+                </div>
+                <div class="card__name">
+                    <p>Boom Headphone</p>
+                </div>
+                <div class="card__precis">
+                    <a href="" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+                    <div>
+                        <span class="card__preci card__preci--before">₹3299</span>
+                        <span class="card__preci card__preci--now">₹2799</span>
+                    </div>
+                    <a href="" class="card__icon"><ion-icon name="cart-outline"></ion-icon></a>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card__img">
+                    <img src="white-headphone-dual-red-yellow-background__1_-removebg-preview.png" style="height: 150px;" alt="">
+                </div>
+                <div class="card__name">
+                    <p>Wired Headphone</p>
+                </div>
+                <div class="card__precis">
+                    <a href="" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+                    
+                    <div>
+                        <span class="card__preci card__preci--before">₹1299</span>
+                        <span class="card__preci card__preci--now">₹999</span>
+                    </div>
+                    <a href="" class="card__icon"><ion-icon name="cart-outline"></ion-icon></a>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card__img">
+                    <img src="1ae45cf7-8f45-4d64-8137-3ea583215309-removebg-preview.png" style="height: 150px;" alt="">
+                </div>
+                <div class="card__name">
+                    <p>Earbuds</p>
+                </div>
+                <div class="card__precis">
+                    <a href="" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+                    
+                    <div>
+                        <span class="card__preci card__preci--before">₹2300</span>
+                        <span class="card__preci card__preci--now">₹1999</span>
+                    </div>
+                    <a href="" class="card__icon"><ion-icon name="cart-outline"></ion-icon></a>
+                </div>
+            </article>
+        </main>
+          
+        
+       
+        <!-- Carousel Start -->
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+
+    <!-- Slide 1 -->
+    <div class="carousel-item active">
+      <img src="Laptop Banner-1.jpg" class="d-block w-100" alt="Slide 1">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Exclusive Laptop Deals</h3>
+        <p>Up to 40% off on top brands.</p>
+        <a href="#" class="btn btn-primary">Shop Now</a>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item">
+      <img src="Mobile Banner-1.jpg" class="d-block w-100" alt="Slide 2">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Latest Mobiles Collection</h3>
+        <p>Trendy, smart & stylish – at unbeatable prices.</p>
+        <a href="#" class="btn btn-success">Explore</a>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item">
+      <img src="laptop-banner-2.jpg" class="d-block w-100" alt="Slide 3">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Top Brand Laptops</h3>
+        <p>Everything you need for your System</p>
+        <a href="#" class="btn btn-warning">Browse</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </button>
+</div>
+<!-- Carousel End -->
+
+
+              <!-- cards-2 -->
+        <h1 class="title-shop m-3 mt-5">Best Selling Products </h1>
+        <main class="main bd-grid" data-aos="zoom-in-up " data-aos-duration="3000">
+            <article class="card ">
+                <div class="card__img">
+                    <img src="speaker-removebg.png" style="height: 150px;" alt="">
+                </div>
+                <div class="card__name">
+                    <p>Speaker</p>
+                </div>
+                <div class="card__precis">
+                    <a href="" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+                    
+                    <div>
+                        <span class="card__preci card__preci--before">₹3500</span>
+                        <span class="card__preci card__preci--now">₹2999</span>
+                    </div>
+                    <a href="" class="card__icon"><ion-icon name="cart-outline"></ion-icon></a>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card__img">
+                    <img src="laptop-removebg-preview.png" style="height: 150px;" alt="">
+                </div>
+                <div class="card__name">
+                    <p>Laptop</p>
+                </div>
+                <div class="card__precis">
+                    <a href="" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+                    <div>
+                        <span class="card__preci card__preci--before">₹49999</span>
+                        <span class="card__preci card__preci--now">₹42999</span>
+                    </div>
+                    <a href="" class="card__icon"><ion-icon name="cart-outline"></ion-icon></a>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card__img">
+                    <img src="iphone-removebg-preview.png" style="height: 150px;" alt="">
+                </div>
+                <div class="card__name">
+                    <p>Iphone-16</p>
+                </div>
+                <div class="card__precis">
+                    <a href="" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+                    
+                    <div>
+                        <span class="card__preci card__preci--before">₹65000</span>
+                        <span class="card__preci card__preci--now">₹59999</span>
+                    </div>
+                    <a href="" class="card__icon"><ion-icon name="cart-outline"></ion-icon></a>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card__img">
+                    <img src="1ae45cf7-8f45-4d64-8137-3ea583215309-removebg-preview.png" style="height: 150px;" alt="">
+                </div>
+                <div class="card__name">
+                    <p>Boom Headphone</p>
+                </div>
+                <div class="card__precis">
+                    <a href="" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+                    
+                    <div>
+                        <span class="card__preci card__preci--before">₹2399</span>
+                        <span class="card__preci card__preci--now">₹1999</span>
+                    </div>
+                    <a href="" class="card__icon"><ion-icon name="cart-outline"></ion-icon></a>
+                </div>
+            </article>
+        </main>
+
+
+
+
+
+       <!-- cards-3 -->
+        <main class="main bd-grid" data-aos="zoom-in-up " data-aos-duration="3000">
+            <article class="card ">
+                <div class="card__img">
+                    <img src="smartwatch-1-removebg-preview.png" style="height: 150px;" alt="">
+                </div>
+                <div class="card__name">
+                    <p>Smartwatch</p>
+                </div>
+                <div class="card__precis">
+                    <a href="" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+                    
+                    <div>
+                        <span class="card__preci card__preci--before">₹2500</span>
+                        <span class="card__preci card__preci--now">₹2000</span>
+                    </div>
+                    <a href="" class="card__icon"><ion-icon name="cart-outline"></ion-icon></a>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card__img">
+                    <img src="smartwatch-2-removebg-preview.png" style="height: 150px;" alt="">
+                </div>
+                <div class="card__name">
+                    <p>Band</p>
+                </div>
+                <div class="card__precis">
+                    <a href="" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+                    <div>
+                        <span class="card__preci card__preci--before">₹1999</span>
+                        <span class="card__preci card__preci--now">₹1499</span>
+                    </div>
+                    <a href="" class="card__icon"><ion-icon name="cart-outline"></ion-icon></a>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card__img">
+                    <img src="smartwatch-3-removebg-preview.png" style="height: 150px;" alt="">
+                </div>
+                <div class="card__name">
+                    <p>Mini-Band</p>
+                </div>
+                <div class="card__precis">
+                    <a href="" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+                    
+                    <div>
+                        <span class="card__preci card__preci--before">₹1699</span>
+                        <span class="card__preci card__preci--now">₹1399</span>
+                    </div>
+                    <a href="" class="card__icon"><ion-icon name="cart-outline"></ion-icon></a>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card__img">
+                    <img src="VR-1-removebg-preview.png" style="height: 150px;" alt="">
+                </div>
+                <div class="card__name">
+                    <p>VR Gadget</p>
+                </div>
+                <div class="card__precis">
+                    <a href="" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+                    
+                    <div>
+                        <span class="card__preci card__preci--before">₹5999</span>
+                        <span class="card__preci card__preci--now">₹4999</span>
+                    </div>
+                    <a href="" class="card__icon"><ion-icon name="cart-outline"></ion-icon></a>
+                </div>
+            </article>
+        </main>
+
+
+
+        
+
+
+
+        <footer class="bg-dark text-light pt-5 pb-4 mt-4">
+            <div class="container text-md-left">
+              <div class="row text-md-left">
+                
+                
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                  <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Nitec</h5>
+                  <p>Best products at unbeatable prices. Shop with us for the latest trends and deals!</p>
+                </div>
+          
+                
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                  <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Products</h5>
+                  <p><a href="#" class="text-light" style="text-decoration: none;">Electronics</a></p>
+                  <p><a href="#" class="text-light" style="text-decoration: none;">Gadgets</a></p>
+                  <p><a href="#" class="text-light" style="text-decoration: none;">Cables</a></p>
+                  <p><a href="#" class="text-light" style="text-decoration: none;">Smart-Devices</a></p>
+                </div>
+          
+                
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                  <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Useful links</h5>
+                  <p><a href="#" class="text-light" style="text-decoration: none;">Your Account</a></p>
+                  <p><a href="#" class="text-light" style="text-decoration: none;">Affiliate Program</a></p>
+                  <p><a href="#" class="text-light" style="text-decoration: none;">Shipping Rates</a></p>
+                  <p><a href="#" class="text-light" style="text-decoration: none;">Help</a></p>
+                </div>
+          
+                
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                  <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
+                  <p><i class="bi bi-house-door-fill me-2"></i> Nagercoil, 629851, India</p>
+                  <p><i class="bi bi-envelope-fill me-2"></i> info@nitec.com</p>
+                  <p><i class="bi bi-phone-fill me-2"></i> +91 9876543210</p>
+                  <p><i class="bi bi-printer-fill me-2"></i> +91 9876543201</p>
+                </div>
+          
+              </div>
+          
+              <hr class="mb-4">
+          
+              
+              <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                  <p>© 2025 Nitec. All rights reserved.</p>
+                </div>
+                
+                <div class="col-md-5 col-lg-4">
+                  <div class="text-center text-md-right">
+                    <a href="#" class="text-light me-4"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-light me-4"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-light me-4"><i class="bi bi-google"></i></a>
+                    <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
+                  </div>
+                </div>
+              </div>
+          
+            </div>
+          </footer>
+          
+
+
+<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
